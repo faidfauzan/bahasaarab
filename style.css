@@ -1,0 +1,112 @@
+body {
+  font-family: 'Fredoka', 'Mali', sans-serif;
+  background-color: #f0fdf9;
+  background-image: radial-gradient(#bae6fd 1.5px, transparent 1.5px), radial-gradient(#bbf7d0 1.5px, #f0fdf9 1.5px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+  direction: rtl;
+}
+
+.bounce-subtle {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(-3%); }
+  50% { transform: translateY(0); }
+}
+
+.pop-in {
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.btn-shadow {
+  box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.1s ease;
+}
+.btn-shadow:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Custom scrollbar for visual appealing UI */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e0f2fe;
+}
+::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 20px;
+}
+
+/* ================= PENGATURAN SUARA ================= */
+#voice-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  border: 0;
+  background: #0284c7;
+  color: #fff;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+#voice-fab:hover { background: #38bdf8; }
+
+#voice-panel {
+  position: fixed;
+  right: 16px;
+  bottom: 74px;
+  z-index: 60;
+  width: min(320px, calc(100vw - 32px));
+  padding: 16px;
+  border-radius: 20px;
+  border: 3px solid #38bdf8;
+  background: #fff;
+  color: #1e293b;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  user-select: auto;
+}
+
+#voice-panel[hidden] { display: none; }
+
+#voice-panel label { display: block; margin: 10px 0 4px; font-weight: 600; }
+
+#voice-panel select { width: 100%; padding: 8px; border: 2px solid #bae6fd; border-radius: 10px; background: #fff; }
+
+#voice-panel input[type="range"] { width: 100%; }
+
+#voice-info { margin: 10px 0; font-size: 12px; color: #64748b; }
+
+.voice-panel-head { display: flex; align-items: center; justify-content: space-between; }
+
+.voice-close { border: 0; background: transparent; font-size: 18px; cursor: pointer; color: #64748b; }
+
+.voice-test {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-bottom: 4px solid #15803d;
+  border-radius: 14px;
+  background: #4ade80;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}

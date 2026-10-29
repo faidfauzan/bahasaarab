@@ -1,0 +1,24 @@
+ISI FOLDER (hanya HTML, CSS, JavaScript - tanpa Python)
+- index.html           : kerangka halaman
+- style.css            : tampilan
+- script.js            : logika website + pengaturan suara
+- tailwind-config.js   : pengaturan warna/font Tailwind (harus dimuat sebelum halaman)
+
+Semua file harus berada di folder yang sama saat dibuka / di-hosting.
+
+CARA MENGATUR SUARA LAKI-LAKI
+1. Buka website, klik ikon gear (pojok kanan bawah).
+2. Di "Atur suara untuk", pilih Umum / Umar / Utsman (Umar dan Utsman dipakai di halaman Hiwar/dialog).
+   Umar dan Utsman bisa diberi suara dan nada berbeda.
+2b. Pilih suara Arab di dropdown (pilih yang namanya laki-laki, misalnya "Hamed" / "Naayf" / "Maged").
+3. Atur "Nada suara" (makin kecil makin berat) dan "Kecepatan", lalu dengarkan lewat "Tes suara".
+4. Pengaturan tersimpan di browser perangkat itu.
+
+CATATAN PENTING
+- Kalau perangkat punya 2 suara Arab laki-laki, Utsman otomatis memakai suara kedua. Kalau hanya ada 1,
+  Umar dan Utsman dibedakan lewat nada (Umar lebih tinggi, Utsman lebih berat).
+- Daftar suara berasal dari perangkat/browser yang membuka website, jadi pengaturan ini
+  harus dilakukan di tiap perangkat. Microsoft Edge di Windows biasanya punya suara "Hamed" (laki-laki).
+- Beberapa suara (misalnya suara Google di Chrome) mengabaikan pengaturan nada.
+- Kalau perangkat tidak punya suara Arab sama sekali, pasang suara Arab di pengaturan perangkat.
+- Kalau nanti ada folder "audio/" berisi mp3, ubah GUNAKAN_MP3 = true di script.js.

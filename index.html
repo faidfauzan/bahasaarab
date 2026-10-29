@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أَدَوَاتُ الْمَدْرَسَةِ - Peralatan Sekolahku</title>
+
+  <!-- Tailwind CSS & FontAwesome Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts for Kids & Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Fredoka:wght@400;600;700&family=Mali:wght@500;700&display=swap" rel="stylesheet">
+
+  <script src="tailwind-config.js"></script>
+
+  <!-- CSS sendiri -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col justify-between selection:bg-sunnyYellow select-none">
+
+  <!-- TOP HEADER / NAVBAR -->
+  <header class="bg-white border-b-4 border-skyBlue shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <button onclick="showPage('home')" class="flex items-center gap-3 focus:outline-none group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-skyBlue to-mintGreen flex items-center justify-center text-white text-2xl shadow-md group-hover:scale-105 transition-transform">
+          <i class="fa-solid font-arabic">أ</i>
+        </div>
+        <div class="text-left">
+          <h1 class="text-xl md:text-2xl font-bold font-arabic text-skyBlueDark tracking-wide">أَدَوَاتُ الْمَدْرَسَةِ</h1>
+          <p class="text-xs md:text-sm font-semibold text-slate-500">Peralatan Sekolahku</p>
+        </div>
+      </button>
+
+      <!-- Stats Bar (Points & Badges) -->
+      <div class="flex items-center gap-2 md:gap-4">
+        <div class="bg-amber-100 border-2 border-amber-400 text-amber-800 px-3 py-1.5 rounded-full flex items-center gap-2 text-sm md:text-base font-bold shadow-sm">
+          <i class="fa-solid font-bold text-amber-500 fa-star"></i>
+          <span id="header-points">0</span> <span class="hidden sm:inline text-xs">Poin</span>
+        </div>
+        <button onclick="showPage('results')" class="bg-sky-100 hover:bg-sky-200 border-2 border-sky-300 text-sky-800 px-3 py-1.5 rounded-full flex items-center gap-2 text-sm md:text-base font-bold transition-colors">
+          <i class="fa-solid fa-trophy text-amber-500"></i>
+          <span class="hidden sm:inline">Piala</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto w-full px-4 py-6 flex-grow">
+
+    <!-- ================= HALAMAN HOME ================= -->
+    <section id="page-home" class="page-content space-y-8">
+      <!-- Hero Banner -->
+      <div class="bg-gradient-to-r from-sky-400 via-sky-300 to-mintGreen text-white rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-4 text-center md:text-left z-10 max-w-lg">
+          <span class="bg-white/30 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">Untuk SD Kelas 1–3</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Belajar Bahasa Arab Jadi Fun & Mudah! 🎉</h2>
+          <p class="text-sky-900 text-sm md:text-base font-medium leading-relaxed">Yuk kenali nama-nama peralatan sekolah dalam bahasa Arab bersama Umar dan Utsman. Mainkan gamenya dan dapatkan bintang terbanyak!</p>
+          <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+            <button onclick="showPage('mufrodat')" class="btn-shadow bg-sunnyYellow text-slate-800 hover:bg-yellow-300 font-bold px-6 py-3.5 rounded-2xl text-lg flex items-center gap-2 border-b-4 border-yellow-600">
+              <i class="fa-solid fa-book-open"></i> MULAI BELAJAR
+            </button>
+            <button onclick="showPage('hiwar')" class="btn-shadow bg-white text-sky-600 hover:bg-sky-50 font-bold px-6 py-3.5 rounded-2xl text-lg flex items-center gap-2 border-b-4 border-slate-200">
+              <i class="fa-solid fa-comments"></i> PERCAKAPAN
+            </button>
+          </div>
+        </div>
+        
+        <!-- Illustration Placeholder / Canvas SVG Kids -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div class="w-48 h-48 md:w-64 md:h-64 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center p-4 border-4 border-white/40 shadow-inner">
+            <svg class="w-full h-full text-white bounce-subtle" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Cute Backpack & Pencil Cartoon Illustration -->
+              <rect x="50" y="60" width="100" height="110" rx="25" fill="#FB923C"/>
+              <rect x="70" y="40" width="60" height="30" rx="10" fill="#F87171"/>
+              <circle cx="100" cy="115" r="25" fill="#FACC15"/>
+              <rect x="75" y="145" width="50" height="15" rx="5" fill="#38BDF8"/>
+              <!-- Eyes -->
+              <circle cx="85" cy="95" r="6" fill="#1E293B"/>
+              <circle cx="115" cy="95" r="6" fill="#1E293B"/>
+              <!-- Smile -->
+              <path d="M 90 110 Q 100 120 110 110" stroke="#1E293B" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <!-- Cheeks -->
+              <circle cx="78" cy="103" r="5" fill="#F43F5E" opacity="0.6"/>
+              <circle cx="122" cy="103" r="5" fill="#F43F5E" opacity="0.6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Grid Navigation -->
+      <div>
+        <h3 class="text-xl font-bold text-slate-700 mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-compass text-skyBlue"></i> Pilih Menu Pembelajaran:
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          
+          <!-- Card 1: Kosakata -->
+          <div onclick="showPage('mufrodat')" class="bg-white rounded-2xl p-5 border-2 border-sky-200 hover:border-skyBlue shadow-md hover:shadow-lg transition-all cursor-pointer flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h4 class="font-bold text-lg text-slate-800">Kosakata</h4>
+            <p class="text-xs text-slate-500 mt-1">15 Mufrodat Sekolah & Suara</p>
+          </div>
+
+          <!-- Card 2: Percakapan -->
+          <div onclick="showPage('hiwar')" class="bg-white rounded-2xl p-5 border-2 border-emerald-200 hover:border-mintGreen shadow-md hover:shadow-lg transition-all cursor-pointer flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h4 class="font-bold text-lg text-slate-800">Percakapan</h4>
+            <p class="text-xs text-slate-500 mt-1">Hiwar Umar & Utsman</p>
+          </div>
+
+          <!-- Card 3: Game Tebak Gambar -->
+          <div onclick="showPage('game1')" class="bg-white rounded-2xl p-5 border-2 border-amber-200 hover:border-sunnyYellow shadow-md hover:shadow-lg transition-all cursor-pointer flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-image"></i>
+            </div>
+            <h4 class="font-bold text-lg text-slate-800">Tebak Gambar</h4>
+            <p class="text-xs text-slate-500 mt-1">Pilih kosakata yang pas</p>
+          </div>
+
+          <!-- Card 4: Game Cocokkan Kata -->
+          <div onclick="showPage('game2')" class="bg-white rounded-2xl p-5 border-2 border-purple-200 hover:border-purple-400 shadow-md hover:shadow-lg transition-all cursor-pointer flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-object-group"></i>
+            </div>
+            <h4 class="font-bold text-lg text-slate-800">Cocokkan Kata</h4>
+            <p class="text-xs text-slate-500 mt-1">Jodohkan gambar & kata</p>
+          </div>
+
+          <!-- Card 5: Game Susun Huruf -->
+          <div onclick="showPage('game4')" class="bg-white rounded-2xl p-5 border-2 border-rose-200 hover:border-rose-400 shadow-md hover:shadow-lg transition-all cursor-pointer flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-font"></i>
+            </div>
+            <h4 class="font-bold text-lg text-slate-800">Susun Huruf</h4>
+            <p class="text-xs text-slate-500 mt-1">Rangkai kata Arab</p>
+          </div>
+
+          <!-- Card 6: Kuis Akhir -->
+          <div onclick="showPage('quiz')" class="bg-white rounded-2xl p-5 border-2 border-orange-200 hover:border-warmOrange shadow-md hover:shadow-lg transition-all cursor-pointer flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h4 class="font-bold text-lg text-slate-800">Kuis Evaluasi</h4>
+            <p class="text-xs text-slate-500 mt-1">Uji kemampuanmu (10 Soal)</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN KOSAKATA / MUFRODAT ================= -->
+    <section id="page-mufrodat" class="page-content hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <button onclick="showPage('home')" class="text-slate-500 hover:text-slate-800 font-bold flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i class="fa-solid fa-arrow-left"></i> Kembali
+        </button>
+        <span class="text-sm font-bold text-sky-700 bg-sky-100 px-4 py-1.5 rounded-full" id="mufrodat-progress">1 dari 15 Kosakata</span>
+      </div>
+
+      <!-- Flashcard Item -->
+      <div class="max-w-xl mx-auto bg-white rounded-3xl border-4 border-sky-300 shadow-xl overflow-hidden p-6 md:p-8 text-center flex flex-col items-center space-y-6 pop-in">
+        
+        <!-- Icon / Visual Cartoon Graphic -->
+        <div id="mufrodat-visual" class="w-48 h-48 bg-sky-50 rounded-2xl flex items-center justify-center border-2 border-sky-100 shadow-inner p-4 text-7xl text-sky-500">
+          <i class="fa-solid fa-book"></i>
+        </div>
+
+        <!-- Text Detail -->
+        <div class="space-y-2">
+          <h2 id="mufrodat-arabic" class="text-4xl md:text-5xl font-extrabold font-arabic text-slate-800 tracking-wide">كِتَابٌ</h2>
+          <p id="mufrodat-latin" class="text-lg font-bold text-sky-600 italic">kitābun</p>
+          <div class="inline-block bg-emerald-100 text-emerald-800 font-bold text-lg px-6 py-1.5 rounded-full border border-emerald-300">
+            Artinya: <span id="mufrodat-indonesian">buku</span>
+          </div>
+        </div>
+
+        <!-- Audio Player Button -->
+        <button onclick="playCurrentMufrodatAudio()" class="btn-shadow bg-mintGreen hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-2xl flex items-center gap-3 text-lg border-b-4 border-emerald-700">
+          <i class="fa-solid fa-volume-high text-xl"></i> DENGARKAN PELAFALAN
+        </button>
+
+      </div>
+
+      <!-- Controls -->
+      <div class="max-w-xl mx-auto flex items-center justify-between gap-4">
+        <button onclick="prevMufrodat()" class="btn-shadow flex-1 bg-white hover:bg-slate-50 text-slate-700 font-bold py-3 px-4 rounded-2xl border-2 border-slate-300 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-chevron-left"></i> Sebelumnya
+        </button>
+        <button onclick="repeatMufrodat()" class="bg-amber-100 hover:bg-amber-200 text-amber-800 font-bold p-3 rounded-2xl border-2 border-amber-300" title="Ulangi Materi">
+          <i class="fa-solid fa-rotate-right text-lg"></i>
+        </button>
+        <button onclick="nextMufrodat()" class="btn-shadow flex-1 bg-skyBlue hover:bg-sky-500 text-white font-bold py-3 px-4 rounded-2xl border-b-4 border-sky-700 flex items-center justify-center gap-2">
+          Selanjutnya <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN PERCAKAPAN (HIWAR) ================= -->
+    <section id="page-hiwar" class="page-content hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <button onclick="showPage('home')" class="text-slate-500 hover:text-slate-800 font-bold flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i class="fa-solid fa-arrow-left"></i> Kembali
+        </button>
+        <h3 class="font-bold text-slate-700 text-lg">Percakapan: Umar & Utsman</h3>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 md:p-8 border-2 border-sky-200 shadow-md space-y-6 max-w-3xl mx-auto">
+        
+        <!-- Speaker 1: Umar -->
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 rounded-full bg-sky-400 text-white flex items-center justify-center font-bold flex-shrink-0 shadow">
+            عُمَر
+          </div>
+          <div class="bg-sky-50 border border-sky-200 rounded-2xl rounded-tl-none p-4 space-y-1 max-w-xl">
+            <p class="font-bold text-sky-900 text-xs">Umar:</p>
+            <p class="font-arabic text-2xl md:text-3xl text-slate-800">السَّلَامُ عَلَيْكُمْ يَا عُثْمَانُ. مَا هٰذِهِ؟</p>
+            <p class="text-xs text-slate-500 italic">Assalāmu 'alaikum yā 'Uthmān. Mā hādhihi?</p>
+            <p class="text-sm text-slate-700 font-semibold">"Assalamu'alaikum wahai Utsman. Apa ini?"</p>
+            <button onclick="speakText('السَّلَامُ عَلَيْكُمْ يَا عُثْمَانُ. مَا هٰذِهِ؟', 'umar')" class="mt-2 text-xs bg-sky-200 hover:bg-sky-300 text-sky-800 px-3 py-1 rounded-full font-bold inline-flex items-center gap-1">
+              <i class="fa-solid fa-volume-high"></i> Putar Suara
+            </button>
+          </div>
+        </div>
+
+        <!-- Speaker 2: Utsman -->
+        <div class="flex gap-4 items-start flex-row-reverse">
+          <div class="w-12 h-12 rounded-full bg-emerald-400 text-white flex items-center justify-center font-bold flex-shrink-0 shadow">
+            عُثْمَان
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 rounded-2xl rounded-tr-none p-4 space-y-1 max-w-xl text-right">
+            <p class="font-bold text-emerald-900 text-xs">Utsman:</p>
+            <p class="font-arabic text-2xl md:text-3xl text-slate-800">وَعَلَيْكُمُ السَّلَامُ. هٰذِهِ حَقِيبَةٌ مَدْرَسِيَّةٌ.</p>
+            <p class="text-xs text-slate-500 italic">Wa 'alaikumussalām. Hādhihi ḥaqībatun madrasiyyatun.</p>
+            <p class="text-sm text-slate-700 font-semibold">"Wa'alaikumussalam. Ini adalah tas sekolah."</p>
+            <button onclick="speakText('وَعَلَيْكُمُ السَّلَامُ. هٰذِهِ حَقِيبَةٌ مَدْرَسِيَّةٌ.', 'utsman')" class="mt-2 text-xs bg-emerald-200 hover:bg-emerald-300 text-emerald-800 px-3 py-1 rounded-full font-bold inline-flex items-center gap-1 dir-ltr">
+              <i class="fa-solid fa-volume-high"></i> Putar Suara
+            </button>
+          </div>
+        </div>
+
+        <!-- Speaker 1: Umar -->
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 rounded-full bg-sky-400 text-white flex items-center justify-center font-bold flex-shrink-0 shadow">
+            عُمَر
+          </div>
+          <div class="bg-sky-50 border border-sky-200 rounded-2xl rounded-tl-none p-4 space-y-1 max-w-xl">
+            <p class="font-bold text-sky-900 text-xs">Umar:</p>
+            <p class="font-arabic text-2xl md:text-3xl text-slate-800">وَمَا ذٰلِكَ؟</p>
+            <p class="text-xs text-slate-500 italic">Wa mā dhālika?</p>
+            <p class="text-sm text-slate-700 font-semibold">"Dan apa itu?"</p>
+            <button onclick="speakText('وَمَا ذٰلِكَ؟', 'umar')" class="mt-2 text-xs bg-sky-200 hover:bg-sky-300 text-sky-800 px-3 py-1 rounded-full font-bold inline-flex items-center gap-1">
+              <i class="fa-solid fa-volume-high"></i> Putar Suara
+            </button>
+          </div>
+        </div>
+
+        <!-- Speaker 2: Utsman -->
+        <div class="flex gap-4 items-start flex-row-reverse">
+          <div class="w-12 h-12 rounded-full bg-emerald-400 text-white flex items-center justify-center font-bold flex-shrink-0 shadow">
+            عُثْمَان
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 rounded-2xl rounded-tr-none p-4 space-y-1 max-w-xl text-right">
+            <p class="font-bold text-emerald-900 text-xs">Utsman:</p>
+            <p class="font-arabic text-2xl md:text-3xl text-slate-800">ذٰلِكَ كِتَابٌ وَهٰذَا قَلَمٌ.</p>
+            <p class="text-xs text-slate-500 italic">Dhālika kitābun wa hādhā qalamun.</p>
+            <p class="text-sm text-slate-700 font-semibold">"Itu adalah buku dan ini adalah pena."</p>
+            <button onclick="speakText('ذٰلِكَ كِتَابٌ وَهٰذَا قَلَمٌ.', 'utsman')" class="mt-2 text-xs bg-emerald-200 hover:bg-emerald-300 text-emerald-800 px-3 py-1 rounded-full font-bold inline-flex items-center gap-1 dir-ltr">
+              <i class="fa-solid fa-volume-high"></i> Putar Suara
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN GAME 1: TEBAK GAMBAR ================= -->
+    <section id="page-game1" class="page-content hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <button onclick="showPage('home')" class="text-slate-500 hover:text-slate-800 font-bold flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i class="fa-solid fa-arrow-left"></i> Menu Utama
+        </button>
+        <span class="text-xs md:text-sm font-bold bg-amber-100 text-amber-800 px-3 py-1.5 rounded-full border border-amber-300">
+          🎮 Game 1: Tebak Gambar
+        </span>
+      </div>
+
+      <div class="max-w-xl mx-auto bg-white rounded-3xl border-4 border-amber-300 shadow-xl p-6 md:p-8 text-center space-y-6">
+        <h3 class="text-lg font-bold text-slate-700">Pilihlah kosakata bahasa Arab yang cocok dengan gambar!</h3>
+        
+        <!-- Display Icon/Picture -->
+        <div id="g1-image" class="w-40 h-40 mx-auto bg-amber-50 rounded-2xl border-2 border-amber-200 flex items-center justify-center text-7xl text-amber-500 shadow-inner">
+          <i class="fa-solid fa-pencil"></i>
+        </div>
+
+        <!-- Choice Options -->
+        <div id="g1-options" class="grid grid-cols-1 gap-3">
+          <!-- Dynamic generated options -->
+        </div>
+
+        <!-- Feedback Box -->
+        <div id="g1-feedback" class="hidden rounded-2xl p-4 font-bold text-lg pop-in"></div>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN GAME 2: COCOKKAN KATA & GAMBAR ================= -->
+    <section id="page-game2" class="page-content hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <button onclick="showPage('home')" class="text-slate-500 hover:text-slate-800 font-bold flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i class="fa-solid fa-arrow-left"></i> Menu Utama
+        </button>
+        <span class="text-xs md:text-sm font-bold bg-purple-100 text-purple-800 px-3 py-1.5 rounded-full border border-purple-300">
+          🧩 Game 2: Cocokkan Kata
+        </span>
+      </div>
+
+      <div class="bg-white rounded-3xl border-4 border-purple-300 shadow-xl p-6 md:p-8 space-y-6 max-w-4xl mx-auto">
+        <div class="text-center space-y-1">
+          <h3 class="text-xl font-bold text-slate-800">Klik Gambar, lalu Klik Kata Arab yang Cocok!</h3>
+          <p class="text-xs text-slate-500">Pasangkan semua item dengan benar.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Left Column: Items/Pictures -->
+          <div class="space-y-3">
+            <h4 class="font-bold text-slate-600 text-sm text-center">GAMBAR BENDA</h4>
+            <div id="g2-pictures" class="space-y-3">
+              <!-- Dynamically populated pictures -->
+            </div>
+          </div>
+
+          <!-- Right Column: Words -->
+          <div class="space-y-3">
+            <h4 class="font-bold text-slate-600 text-sm text-center">KOSAKATA ARAB</h4>
+            <div id="g2-words" class="space-y-3">
+              <!-- Dynamically populated words -->
+            </div>
+          </div>
+        </div>
+
+        <div id="g2-status" class="text-center font-bold text-lg text-emerald-600 hidden bg-emerald-50 p-4 rounded-2xl border border-emerald-200">
+          🎉 Hebat! Semua pasangan berhasil dicocokkan!
+        </div>
+
+        <div class="text-center pt-2">
+          <button onclick="initGame2()" class="btn-shadow bg-purple-500 hover:bg-purple-600 text-white font-bold px-6 py-2.5 rounded-xl text-sm border-b-4 border-purple-800">
+            <i class="fa-solid fa-rotate-right"></i> Acak Ulang Game
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN GAME 3: SUSUN HURUF ================= -->
+    <section id="page-game4" class="page-content hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <button onclick="showPage('home')" class="text-slate-500 hover:text-slate-800 font-bold flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i class="fa-solid fa-arrow-left"></i> Menu Utama
+        </button>
+        <span class="text-xs md:text-sm font-bold bg-rose-100 text-rose-800 px-3 py-1.5 rounded-full border border-rose-300">
+          ✏️ Game 3: Susun Huruf
+        </span>
+      </div>
+
+      <div class="max-w-xl mx-auto bg-white rounded-3xl border-4 border-rose-300 shadow-xl p-6 md:p-8 text-center space-y-6">
+        <h3 class="text-lg font-bold text-slate-700">Susunlah huruf-huruf berikut agar membentuk kata yang sesuai gambar!</h3>
+
+        <div id="g4-hint-image" class="w-32 h-32 mx-auto bg-rose-50 rounded-2xl border border-rose-200 flex items-center justify-center text-5xl text-rose-500 shadow-inner">
+          <i class="fa-solid fa-book"></i>
+        </div>
+
+        <!-- Answer Slots Area (RTL) -->
+        <div class="space-y-2">
+          <p class="text-xs font-bold text-slate-400">JAWABANMU (DARI KANAN KE KIRI):</p>
+          <div id="g4-answer-slots" class="flex flex-row-reverse justify-center gap-2 min-h-[60px] p-2 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-300">
+            <!-- Selected Letter Tiles -->
+          </div>
+        </div>
+
+        <!-- Letters Pool (RTL) -->
+        <div class="space-y-2">
+          <p class="text-xs font-bold text-slate-400">PILIHAN HURUF:</p>
+          <div id="g4-letter-pool" class="flex flex-wrap justify-center gap-2 dir-rtl">
+            <!-- Scrambled Letters -->
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-center gap-3">
+          <button onclick="resetGame4Current()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-4 py-2 rounded-xl text-sm">
+            <i class="fa-solid fa-eraser"></i> Hapus
+          </button>
+          <button onclick="checkGame4Answer()" class="btn-shadow bg-rose-500 hover:bg-rose-600 text-white font-bold px-6 py-2 border-b-4 border-rose-800 rounded-xl text-sm">
+            <i class="fa-solid fa-check"></i> Periksa Jawaban
+          </button>
+        </div>
+
+        <div id="g4-feedback" class="hidden rounded-2xl p-4 font-bold text-lg pop-in"></div>
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN KUIS EVALUASI ================= -->
+    <section id="page-quiz" class="page-content hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <button onclick="showPage('home')" class="text-slate-500 hover:text-slate-800 font-bold flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i class="fa-solid fa-arrow-left"></i> Keluar
+        </button>
+        <span class="text-sm font-bold bg-orange-100 text-orange-800 px-4 py-1.5 rounded-full border border-orange-300" id="quiz-progress-text">Soal 1 dari 10</span>
+      </div>
+
+      <div class="max-w-2xl mx-auto bg-white rounded-3xl border-4 border-orange-300 shadow-xl p-6 md:p-8 space-y-6">
+        
+        <!-- Question Box -->
+        <div class="space-y-3 text-center">
+          <span id="quiz-type-badge" class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-full">Tebak Arti</span>
+          <h3 id="quiz-question-text" class="text-2xl font-bold text-slate-800">Apa arti dari kata Bahasa Arab berikut?</h3>
+          
+          <div id="quiz-visual-container" class="py-2">
+            <div id="quiz-arabic-display" class="font-arabic text-4xl md:text-5xl text-sky-700 font-bold">كِتَابٌ</div>
+          </div>
+        </div>
+
+        <!-- Choices -->
+        <div id="quiz-options-container" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <!-- Dynamic Buttons -->
+        </div>
+
+        <!-- Feedback & Next Button -->
+        <div id="quiz-feedback-box" class="hidden space-y-3 pt-3 border-t border-slate-100 text-center">
+          <div id="quiz-feedback-text" class="font-bold text-lg"></div>
+          <button id="quiz-next-btn" onclick="nextQuizQuestion()" class="btn-shadow bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-2xl border-b-4 border-orange-800 inline-flex items-center gap-2">
+            LANJUTKAN <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= HALAMAN HASIL BELAJAR / RAPOR ================= -->
+    <section id="page-results" class="page-content hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <button onclick="showPage('home')" class="text-slate-500 hover:text-slate-800 font-bold flex items-center gap-2 bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
+          <i class="fa-solid fa-house"></i> Beranda
+        </button>
+        <h3 class="font-bold text-slate-700 text-lg">Rapor & Hasil Belajar</h3>
+      </div>
+
+      <div class="max-w-2xl mx-auto bg-white rounded-3xl border-4 border-sky-300 shadow-xl p-6 md:p-8 space-y-6">
+        
+        <!-- User Profile Input -->
+        <div class="bg-sky-50 rounded-2xl p-4 border border-sky-200 flex flex-col sm:flex-row items-center gap-4">
+          <div class="w-16 h-16 rounded-full bg-sky-400 text-white text-3xl flex items-center justify-center font-bold">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <div class="flex-grow w-full text-center sm:text-left">
+            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">Nama Siswa:</label>
+            <input type="text" id="user-name-input" value="Siswa Juara" onchange="saveUserData()" class="bg-white border-2 border-sky-300 rounded-xl px-3 py-1.5 font-bold text-slate-800 w-full focus:outline-none focus:border-sky-500 text-center sm:text-left">
+          </div>
+        </div>
+
+        <!-- Grade Summary Card -->
+        <div class="text-center p-6 bg-gradient-to-tr from-amber-100 to-yellow-50 rounded-3xl border-2 border-amber-300 space-y-2">
+          <p class="text-xs font-bold text-amber-700 uppercase tracking-wider">Nilai Kuis Terakhir</p>
+          <div id="res-score" class="text-6xl font-extrabold text-amber-600">0</div>
+          <div id="res-badge" class="inline-block bg-amber-400 text-slate-900 font-bold px-4 py-1.5 rounded-full text-base">
+            هَيَّا نَتَعَلَّمْ مَرَّةً أُخْرَى
+          </div>
+          <p id="res-badge-sub" class="text-sm font-semibold text-amber-800">Ayo belajar lagi!</p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-center">
+            <p class="text-xs text-slate-500 font-bold">Total Poin</p>
+            <p id="res-total-points" class="text-xl font-bold text-sky-600">0</p>
+          </div>
+          <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-center">
+            <p class="text-xs text-slate-500 font-bold">Kosakata Dipelajari</p>
+            <p id="res-learned-count" class="text-xl font-bold text-emerald-600">0 / 15</p>
+          </div>
+          <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-center col-span-2 sm:col-span-1">
+            <p class="text-xs text-slate-500 font-bold">Benar / Salah Kuis</p>
+            <p id="res-quiz-ratio" class="text-xl font-bold text-purple-600">0 / 0</p>
+          </div>
+        </div>
+
+        <!-- Badges Earned Section -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2">
+            <i class="fa-solid fa-award text-amber-500"></i> Lencana Penghargaan:
+          </h4>
+          <div class="grid grid-cols-3 gap-3">
+            <div id="badge-mufrodat" class="bg-slate-100 opacity-50 p-3 rounded-2xl border border-slate-200 text-center text-xs font-bold space-y-1">
+              <i class="fa-solid fa-book-bookmark text-2xl text-sky-500 block"></i>
+              <span>Pakar Mufrodat</span>
+            </div>
+            <div id="badge-tebak" class="bg-slate-100 opacity-50 p-3 rounded-2xl border border-slate-200 text-center text-xs font-bold space-y-1">
+              <i class="fa-solid fa-gamepad text-2xl text-amber-500 block"></i>
+              <span>Jago Tebak</span>
+            </div>
+            <div id="badge-juara" class="bg-slate-100 opacity-50 p-3 rounded-2xl border border-slate-200 text-center text-xs font-bold space-y-1">
+              <i class="fa-solid fa-crown text-2xl text-yellow-500 block"></i>
+              <span>Juara Kuis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Actions -->
+        <div class="flex flex-wrap gap-3 pt-2">
+          <button onclick="showPage('mufrodat')" class="flex-1 bg-sky-100 hover:bg-sky-200 text-sky-800 font-bold py-3 px-4 rounded-2xl border border-sky-300 text-center text-sm">
+            <i class="fa-solid fa-book-open"></i> Ulangi Belajar
+          </button>
+          <button onclick="showPage('quiz')" class="flex-1 bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold py-3 px-4 rounded-2xl border border-amber-500 text-center text-sm">
+            <i class="fa-solid fa-rotate-right"></i> Main Kuis Lagi
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 font-semibold">
+    <p>أَدَوَاتُ الْمَدْرَسَةِ — Media Pembelajaran Bahasa Arab SD Kelas 1–3</p>
+    <p class="text-slate-400 text-[10px] mt-1">Dibuat khusus untuk pendidikan anak interaktif mandiri.</p>
+  </footer>
+
+  <!-- ================= PENGATURAN SUARA ================= -->
+  <button id="voice-fab" type="button" onclick="toggleVoicePanel()" aria-label="Pengaturan suara" title="Pengaturan suara">
+    <i class="fa-solid fa-gear"></i>
+  </button>
+  <div id="voice-panel" role="dialog" aria-label="Pengaturan suara" hidden>
+    <div class="voice-panel-head">
+      <strong>Pengaturan Suara</strong>
+      <button type="button" class="voice-close" onclick="toggleVoicePanel()" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <label for="voice-target">Atur suara untuk</label>
+    <select id="voice-target">
+      <option value="default">Umum (kosakata, game, kuis)</option>
+      <option value="umar">Umar (dialog)</option>
+      <option value="utsman">Utsman (dialog)</option>
+    </select>
+    <label for="voice-select">Pilih suara Arab</label>
+    <select id="voice-select"></select>
+    <label for="voice-pitch">Nada suara (kecil = lebih berat): <span id="voice-pitch-val"></span></label>
+    <input type="range" id="voice-pitch" min="0" max="2" step="0.1">
+    <label for="voice-rate">Kecepatan (kecil = lebih pelan): <span id="voice-rate-val"></span></label>
+    <input type="range" id="voice-rate" min="0.4" max="1.2" step="0.1">
+    <p id="voice-info"></p>
+    <button type="button" class="voice-test" onclick="tesSuaraPanel()">
+      <i class="fa-solid fa-volume-high"></i> Tes suara
+    </button>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script src="script.js"></script>
+</body>
+</html>
